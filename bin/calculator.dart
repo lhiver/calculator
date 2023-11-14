@@ -23,7 +23,7 @@ double secondNumber() {
   double number2 = 0.0;
   do {
     number2 = input('Digite um número2: ');
-  } while (number2 == 0);
+  } while (number2 == 0.0);
   print(number2);
   return number2;
 }
@@ -34,22 +34,25 @@ void opt() {
   print('2 - MULTIPLICAÇÃO');
   print('3 - DIVISÃO');
   print('4 - SUBTRAÇÃO');
+
   double opcao = input('Digite um número entre 1 e 4');
-  switch (opcao) {
-    case == 1:
+  int opcaoint = opcao.toInt();
+
+  switch (opcaoint) {
+    case 1:
       sum();
       break;
-    case == 2:
+    case 2:
       mult();
       break;
-    case == 3:
+    case 3:
       div();
       break;
-    case == 4:
+    case 4:
       sub();
       break;
     default:
-      print('numero invalido!!');
+      print('numero inválido!!');
   }
 }
 
