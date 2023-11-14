@@ -4,30 +4,6 @@ void main() {
   opt();
 }
 
-double input(String numero) {
-  print(numero);
-  String toInput = stdin.readLineSync() ?? '';
-  return double.tryParse(toInput) ?? 0.0;
-}
-
-double firstNumber() {
-  double number1 = 0.0;
-  do {
-    number1 = input('Digite um número: ');
-  } while (number1 == 0.0);
-  print(number1);
-  return number1;
-}
-
-double secondNumber() {
-  double number2 = 0.0;
-  do {
-    number2 = input('Digite um número2: ');
-  } while (number2 == 0.0);
-  print(number2);
-  return number2;
-}
-
 void opt() {
   print('Escolha uma operação: ');
   print('1 - SOMA');
@@ -54,6 +30,30 @@ void opt() {
     default:
       print('numero inválido!!');
   }
+}
+
+double input(String numero) {
+  print(numero);
+  String toInput = stdin.readLineSync() ?? '';
+  return double.tryParse(toInput) ?? 0.0;
+}
+
+double firstNumber() {
+  double number1 = 0.0;
+  do {
+    number1 = input('Digite um número: ');
+  } while (number1 == 0.0);
+  print(number1);
+  return number1;
+}
+
+double secondNumber() {
+  double number2 = 0.0;
+  do {
+    number2 = input('Digite um número2: ');
+  } while (number2 == 0.0);
+  print(number2);
+  return number2;
 }
 
 double sum() {
